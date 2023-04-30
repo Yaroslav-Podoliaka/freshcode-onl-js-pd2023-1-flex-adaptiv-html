@@ -1,6 +1,5 @@
 'use strict';
 let a = Number(prompt('Enter number'));
-let result = 0;
 if (Number.isNaN(a) && a > 0){
   console.log('Enter wrong number');
 } else {
