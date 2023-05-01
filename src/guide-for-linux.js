@@ -1,6 +1,9 @@
 'use strict';
-let variant = Number(prompt('Enter a number from 1 to 7'));
+let variant = Number(prompt('Enter a number from 0 to 7'));
 switch (variant) {
+  case 0:
+    console.log(`${variant} --- not allowed to read, modify, execute`);
+    break;
   case 1:
     console.log(`${variant} --x only file execution allowed`);
     break;
