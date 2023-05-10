@@ -6,16 +6,19 @@
  */
 const ageTwoFold = (sonAge, fatherAge) => {
   let result = 0;
-  if (fatherAge - sonAge < 15 || sonAge <= 0) {
+  if (fatherAge - sonAge < 15 || sonAge < 0) {
     return 'You entered wrong information';
   }
-  for (let i = 0; i < fatherAge - sonAge; i++){
-    if (fatherAge / sonAge === 2) {
+  if (fatherAge / sonAge === 2) {
+    // эту проверку можно не делать, т.к. в следующем условии всего два действия 
     return result;
     }
-    sonAge++;
-    fatherAge++;
-    result++
+  if (fatherAge - sonAge >= sonAge) {
+    result = fatherAge - 2 * sonAge;
+    return result;
+  } else {
+    result = sonAge * 2 - fatherAge;
+    return result;
   }
 }
-console.log(ageTwoFold(1, 16));
+console.log(ageTwoFold(30, 58));
