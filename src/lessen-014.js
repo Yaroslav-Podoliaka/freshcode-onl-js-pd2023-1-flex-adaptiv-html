@@ -1,50 +1,50 @@
 'use strict';
-// let firstName = 'Jhon';
-// let lastNane = 'Doe';
-//   function sayHi() {
-//     console.log('Hi, ' + firstName);
-//     return function () {
-//       return`Hello ${lastNane}`;
-//     }
-//   }
-// sayHi();
-// firstName = 'Pete';
-// const hello = sayHi();
-// console.log(hello());
-// sayHi();
+let firstName = 'Jhon';
+let lastNane = 'Doe';
+  function sayHi() {
+    console.log('Hi, ' + firstName);
+    return function () {
+      return`Hello ${lastNane}`;
+    }
+  }
+sayHi();
+firstName = 'Pete';
+const hello = sayHi();
+console.log(hello());
+sayHi();
 
-// function makeWolker() {
-//   let secondName = 'Pete';
-//   return function () {
-//     return secondName;
-//   }
-// }
-// let secondName = 'Jhon';
-// let work = makeWolker();
-// console.log(work());
+function makeWolker() {
+  let secondName = 'Adam';
+  return function () {
+    return secondName;
+  }
+}
+let secondName = 'Rebecca';
+let work = makeWolker();
+console.log(work());
 
-// function counter() {
-//   let count = 0;
-//   return function () {
-//     count++;
-//     return count
-//   }
-// }
-// const counter1 = counter();
-// const counter2 = counter();
+function counter() {
+  let count = 0;
+  return function () {
+    count++;
+    return count
+  }
+}
+const counter1 = counter();
+const counter2 = counter();
 
-// console.log(counter1());
-// console.log(counter1());
-// console.log(counter1());
-// console.log(counter1());
-// console.log('-----------------')
-// console.log(counter2());
-// console.log(counter2());
-// console.log(counter2());
-// console.log(counter2());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
+console.log(counter1());
+console.log('-----------------')
+console.log(counter2());
+console.log(counter2());
+console.log(counter2());
+console.log(counter2());
 
-// const someFunc = new Function('a', 'b', 'return a + b');
-// console.log(someFunc(10, 20));
+const someFunc = new Function('a', 'b', 'return a + b');
+console.log(someFunc(10, 20));
 
 function fibonacci(position) {
   if (position < 3) {
@@ -84,7 +84,7 @@ for (const key in bmw) {
 console.log(bmw);
 const phone = {
   price: 200,
-  resplution: '800x400',
+  resolution: '800x400',
 }
 const carPone = Object.assign({}, bmw, phone);
 console.log(carPone)

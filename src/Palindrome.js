@@ -1,5 +1,5 @@
 'use strict';
-const str3 = 'ABcba'
+const str3 = 'aBcba'
 function palindrome(str) {
   let separator = '';
   let array_1 = str.toUpperCase().split(separator);
@@ -12,3 +12,15 @@ function palindrome(str) {
   return true;
 }
 console.log(palindrome(str3));
+
+function wordPalindrome(str) {
+  let separator = '';
+  if (str.toUpperCase().split(separator).join(separator) ===
+    str.toUpperCase().split(separator).reverse().join(separator)) {
+    return true;
+  }
+  return false;
+}
+console.log(wordPalindrome(str3));
+
+

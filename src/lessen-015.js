@@ -141,3 +141,13 @@ function palindrome(str) {
 }
 console.log(palindrome(str3));
 
+function wordPalindrome(str) {
+  let separator = '';
+  if (str.toUpperCase().split(separator).join(separator) ===
+    str.toUpperCase().split(separator).reverse().join(separator)) {
+    return true;
+  }
+  return false;
+}
+console.log(wordPalindrome(str3));
+
