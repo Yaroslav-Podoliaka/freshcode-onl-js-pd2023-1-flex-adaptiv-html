@@ -79,6 +79,19 @@ function MyArrayProto() {
     }
     return false;
   }
+  this.every = function (fn) {
+    if (this.length === 0) {
+      return true;
+    }
+    for (let i = 0; i < this.length; i++){
+      if (fn(this[i], i, this)) {
+        
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
   this.filter = function (fn) { 
     const newArray = new MyArray();
     for (let i = 0; i < this.length; i++){
@@ -104,6 +117,7 @@ console.log(myArray2.pop());
 console.log(myArray2);
 myArray2.forEach((el) => console.log(el * 2));
 console.log(myArray2.some(el => el % 3 === 0));
+console.log(myArray2.every(el => typeof el === 'number'));
 console.log(myArray2.filter(el => el >= 30));
 console.log(myArray2.map(el => el ** 2));
 
