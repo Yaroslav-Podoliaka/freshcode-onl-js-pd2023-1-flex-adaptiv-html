@@ -179,7 +179,7 @@ function myReduceRight(arr, callback, startValue) {
   let result;
   if (startValue) {
     result = startValue;
-    for (let i = arr.length; i > 0 ; i--){
+    for (let i = arr.length - 1; i >= 0 ; i--){
       result = callback(result, arr[i], i, arr);
   }
   }  else {

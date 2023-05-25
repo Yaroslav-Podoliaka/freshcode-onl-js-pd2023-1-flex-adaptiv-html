@@ -108,6 +108,14 @@ function MyArrayProto() {
     }
     return newArray;
   }
+  this.reverse = function () {
+    for (let i = 0; i < this.length; i++) {
+      [this[i], this[this.length - 1]] = [this[this.length - 1], this[i]];
+      this.length--;
+    }
+    return this;
+  };
+
 }
 const arr5 = Array(12, 15, 18);
 console.log(arr5);
@@ -122,18 +130,25 @@ console.log(myArray2.filter(el => el >= 30));
 console.log(myArray2.map(el => el ** 2));
 
 const users = ['Jhon', 'Bill', 'Petr'];
-// let Jhon = user[0];
-let [jhon,bill,petr] = users
+console.log(users.reverse());
+// let jhon = users[0];
+// let bill = users[1];
+// let petr = users[2];
+let [jhon, bill, petr] = users;
 console.log(jhon);
 console.log(bill);
 console.log(petr);
+
 const person = {
   name: 'Jane',
-  age: 30,
+  age: 20,
 }
 let { name: jane, age } = person;
 console.log(jane);
 console.log(age);
+[jane, petr] = [petr, jane];
+console.log(petr);
+console.log(jane);
 
 // const arr1 = new Array(1, 2);
 // console.log(arr1);
