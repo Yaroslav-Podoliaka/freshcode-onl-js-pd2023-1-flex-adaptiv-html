@@ -68,15 +68,16 @@ function MyArrayProto() {
     return newArray;
   };
   this.reverse = function () {
-    for (let i = 0; i < this.length; i++) {
-      [this[i], this[this.length - 1]] = [this[this.length - 1], this[i]];
-      this.length--;
+    const lastIndex = this.length - 1;
+    let tmp;
+    for (let i = 0; i < this.length / 2; i++) {
+      [this[i], this[lastIndex - i]] = [this[lastIndex - i], this[i]];
     }
     return this;
   };
 }
 const arr5 = Array(12, 15, 18);
-const users = ['Jhon', 'Bill', 'Peter', 'Jane', 'Greg'];
+const users = new MyArray('Jhon', 'Bill', 'Peter', 'Jane', 'Greg');
 console.log(arr5);
 const myArray2 = new MyArray(20, 30, 50, 80);
 console.log(myArray2);
@@ -87,5 +88,6 @@ console.log(myArray2.some((el) => el % 3 === 0));
 console.log(myArray2.every((el) => typeof el === "number"));
 console.log(myArray2.filter((el) => el >= 30));
 console.log(myArray2.map((el) => el ** 2));
+console.log(users);
 console.log(users.reverse());
 

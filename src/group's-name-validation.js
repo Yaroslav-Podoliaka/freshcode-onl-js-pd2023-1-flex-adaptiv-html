@@ -14,18 +14,18 @@ const arrGroups = [
             'FM2022-1',
             'FM1920'
 ];
-function checkNameGroup(arr) {
-  const reg = /^\w[FDEMfdem]\d[20]\d{2}\S*\d*/gu;
-  for (let i = 0; i < arr.length; i++) {
-    if (reg.test(arrGroups[i])) {
-      console.log(arrGroups[i], 'Success');
+function checkNameGroup(str) {
+  const reg = /^(F[DEM]|f[dem])20\d{2}(-\d+)?$/g;
+    if (reg.test(str)) {
+      return `${str} is Success`;
     } else {
-      console.log(arrGroups[i], 'Error');
+      return `${str} is Error`;
     }
-  }
-  return 0
 }
-console.log(checkNameGroup(arrGroups));
+for (const name of arrGroups) {
+  console.log(checkNameGroup(name));
+}
+
 
 
 

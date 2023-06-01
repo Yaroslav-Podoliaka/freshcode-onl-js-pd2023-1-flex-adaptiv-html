@@ -50,8 +50,6 @@ MyArray.isMyArray = function (obj) {
 }
 
 MyArray.prototype = new MyArrayProto();
-
-
 console.dir(MyArray);
 function MyArrayProto() {
   this.push = function (...args) {
@@ -116,17 +114,20 @@ function MyArrayProto() {
     return newArray;
   }
   this.reverse = function () {
-    for (let i = 0; i < this.length; i++) {
-      [this[i], this[this.length - 1]] = [this[this.length - 1], this[i]];
-      this.length--;
+    const lastIndex = this.length - 1;
+    let tmp;
+    for (let i = 0; i < this.length / 2; i++) {
+      // tmp = this[i];
+      // this[i] = this[lastIndex - i];
+      // this[lastIndex - 1] = tmp;
+      [this[i], this[lastIndex - i]] = [this[lastIndex - i], this[i]];
     }
     return this;
   };
-
 }
 const arr5 = Array(12, 15, 18);
 console.log(arr5);
-const myArray2 = new MyArray(20, 30, 50, 80);
+const myArray2 = new MyArray(20, 30, 50, 80, 100);
 console.log(myArray2);
 console.log(myArray2.pop());
 console.log(myArray2);
@@ -136,9 +137,9 @@ console.log(myArray2.every(el => typeof el === 'number'));
 console.log(myArray2.filter(el => el >= 30));
 console.log(myArray2.map(el => el ** 2));
 console.log(myArray2.reverse());
-const users = new MyArray('Jhon', 'Bill', 'Petr');
-// console.log(users);
-// console.log(users.reverse());
+const users = new MyArray('Jhon', 'Bill', 'Peter', 'Jane', 'Greg');
+console.log(users);
+console.log(users.reverse());
 // console.log(users);
 console.log(MyArray.isMyArray(arr5));
 console.log(MyArray.isMyArray(myArray2));
