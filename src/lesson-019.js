@@ -1,85 +1,85 @@
 'use strict';
-class MyArray {
-  constructor(...args) {
-    this.length = 0;
-    for (let i = 0; i < args.length; i++) {
-      this.push(args[i]);
-    }
-  }
-  static isCar(obj) {
-    return obj instanceof this;
-  }
-  push(...args) {
-    if (args) {
-      for (let i = 0; i < args.length; i++) {
-        this[this.length++] = args[i];
-      }
-      return this.length;
-    }
-  }
-  some(fn) {
-    for (let i = 0; i < this.length; i++) {
-      if (fn(this[i], i, this)) {
-        return true;
-      }
-    }
-    return false;
-  }
-  every(fn) {
-    if (this.length === 0) {
-      return true;
-    }
-    for (let i = 0; i < this.length; i++) {
-      if (!fn(this[i], i, this)) {
-        return false;
-      }
-    }
-    return true;
-  }
-  reverse() {
-    const lastIndex = this.length - 1;
-    let tmp;
-    for (let i = 0; i < this.length / 2; i++) {
-      [this[i], this[lastIndex - i]] = [this[lastIndex - i], this[i]];
-    }
-    return this;
-  }
-  concat(...args) {
-    const result = this;
-    for (let i = 0; i < args.length; i++) {
-      if (Array.isArray(args[i])) {
-        result.push(...args[i]);
-      } else if (MyArray.isMyArray(args[i])) {
-        for (let j = 0; j < args[i].length; j++) {
-          result.push(args[i][j]);
-        }
-      } else {
-        result.push(args[i]);
-      }
-    }
-    return result;
-  }
-  flat(depth = 1) {
-    let newMyArray = new MyArray();
-    this.forEach(item => {
-      if (MyArray.isMyArray(item) && depth) {
-        const tmpArr = item.flat(depth - 1);
-        newMyArray = newMyArray.concat(tmpArr);
-      } else if (item !== undefined) {
-        newMyArray.push(item);
-      }
-    })
-    return newMyArray;
-  }
-}
+// class MyArray {
+//   constructor(...args) {
+//     this.length = 0;
+//     for (let i = 0; i < args.length; i++) {
+//       this.push(args[i]);
+//     }
+//   }
+//   static isCar(obj) {
+//     return obj instanceof this;
+//   }
+//   push(...args) {
+//     if (args) {
+//       for (let i = 0; i < args.length; i++) {
+//         this[this.length++] = args[i];
+//       }
+//       return this.length;
+//     }
+//   }
+//   some(fn) {
+//     for (let i = 0; i < this.length; i++) {
+//       if (fn(this[i], i, this)) {
+//         return true;
+//       }
+//     }
+//     return false;
+//   }
+//   every(fn) {
+//     if (this.length === 0) {
+//       return true;
+//     }
+//     for (let i = 0; i < this.length; i++) {
+//       if (!fn(this[i], i, this)) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+//   reverse() {
+//     const lastIndex = this.length - 1;
+//     let tmp;
+//     for (let i = 0; i < this.length / 2; i++) {
+//       [this[i], this[lastIndex - i]] = [this[lastIndex - i], this[i]];
+//     }
+//     return this;
+//   }
+//   concat(...args) {
+//     const result = this;
+//     for (let i = 0; i < args.length; i++) {
+//       if (Array.isArray(args[i])) {
+//         result.push(...args[i]);
+//       } else if (MyArray.isMyArray(args[i])) {
+//         for (let j = 0; j < args[i].length; j++) {
+//           result.push(args[i][j]);
+//         }
+//       } else {
+//         result.push(args[i]);
+//       }
+//     }
+//     return result;
+//   }
+//   flat(depth = 1) {
+//     let newMyArray = new MyArray();
+//     this.forEach(item => {
+//       if (MyArray.isMyArray(item) && depth) {
+//         const tmpArr = item.flat(depth - 1);
+//         newMyArray = newMyArray.concat(tmpArr);
+//       } else if (item !== undefined) {
+//         newMyArray.push(item);
+//       }
+//     })
+//     return newMyArray;
+//   }
+// }
 
-const myArr = new MyArray(10, 20, 30);
-// const myArrArr = new MyArray(10, [20], 30);
-console.log(myArr);
-console.log(myArr.some((el)=> el % 3 === 0));
-console.log(myArr.every((el) => el % 10 === 0 && el !== 0));
-console.log(myArr.reverse());
-// console.log(myArr.concat)
+// const myArr = new MyArray(10, 20, 30);
+// // const myArrArr = new MyArray(10, [20], 30);
+// console.log(myArr);
+// console.log(myArr.some((el)=> el % 3 === 0));
+// console.log(myArr.every((el) => el % 10 === 0 && el !== 0));
+// console.log(myArr.reverse());
+// // console.log(myArr.concat)
 
 // ругулярные выражения
 
