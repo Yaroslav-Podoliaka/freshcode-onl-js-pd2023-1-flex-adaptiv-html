@@ -44,7 +44,14 @@ function MyArray(...args) {
   //   return ++this.length;
   // }
 }
+
+MyArray.isMyArray = function (obj) {
+  return obj instanceof MyArray;
+}
+
 MyArray.prototype = new MyArrayProto();
+
+
 console.dir(MyArray);
 function MyArrayProto() {
   this.push = function (...args) {
@@ -128,27 +135,33 @@ console.log(myArray2.some(el => el % 3 === 0));
 console.log(myArray2.every(el => typeof el === 'number'));
 console.log(myArray2.filter(el => el >= 30));
 console.log(myArray2.map(el => el ** 2));
+console.log(myArray2.reverse());
+const users = new MyArray('Jhon', 'Bill', 'Petr');
+// console.log(users);
+// console.log(users.reverse());
+// console.log(users);
+console.log(MyArray.isMyArray(arr5));
+console.log(MyArray.isMyArray(myArray2));
+console.dir(MyArray);
 
-const users = ['Jhon', 'Bill', 'Petr'];
-console.log(users.reverse());
 // let jhon = users[0];
 // let bill = users[1];
 // let petr = users[2];
-let [jhon, bill, petr] = users;
-console.log(jhon);
-console.log(bill);
-console.log(petr);
+// let [jhon, bill, petr] = users;
+// console.log(jhon);
+// console.log(bill);
+// console.log(petr);
 
-const person = {
-  name: 'Jane',
-  age: 20,
-}
-let { name: jane, age } = person;
-console.log(jane);
-console.log(age);
-[jane, petr] = [petr, jane];
-console.log(petr);
-console.log(jane);
+// const person = {
+//   name: 'Jane',
+//   age: 20,
+// }
+// let { name: jane, age } = person;
+// console.log(jane);
+// console.log(age);
+// [jane, petr] = [petr, jane];
+// console.log(petr);
+// console.log(jane);
 
 // const arr1 = new Array(1, 2);
 // console.log(arr1);
