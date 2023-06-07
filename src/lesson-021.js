@@ -1,0 +1,54 @@
+'use strict';
+// window.document.body.style.background = 'teal';
+document.body.style.background = "teal";
+console.log(window.innerHeight);
+const bodyChildNodes = document.body.childNodes;
+const bodyChildren = document.body.children;
+const container = document.getElementById('container');
+console.log(bodyChildNodes);
+console.log(bodyChildNodes);
+console.log(bodyChildNodes.item(1));
+console.log(bodyChildNodes[1]);
+console.log((bodyChildNodes[1].style.color = "red"));
+console.log(bodyChildren[1]);
+console.log(bodyChildren[1].previousElementSibling);
+console.log(container);
+console.log(secondP);
+const paragraph = document.querySelectorAll('p');
+console.log(paragraph);
+const newPar = document.createElement('p');
+console.log(newPar);
+// newPar.textContent = 'Six Par';
+// newPar.innerText = "Six Par";
+newPar.innerHTML = "<span>Six</span>";
+console.log(container.children)
+container.appendChild(newPar);
+// console.log(container.removeChild(newPar));
+newPar.className = 'par item';
+let classList = newPar.classList;
+console.log(classList);
+classList.toggle('six');
+console.log(classList);
+
+const body = document.body;
+const divContanier = document.createElement('div');
+const uList = document.createElement("ul");
+const list1 = document.createElement("li");
+const list2 = document.createElement("li");
+const list3 = document.createElement("li");
+const par1 = document.createElement("p");
+const par2 = document.createElement("p");
+const par3 = document.createElement("p");
+par1.textContent = '1 par';
+par2.innerText = "2 par";
+par3.innerHTML = "3 par";
+// const script = document.querySelector('script');
+divContanier.className = ('container');
+body.append(divContanier);
+divContanier.append(uList);
+uList.append(list1, list2, list3);
+list1.append(par1);
+list2.append(par2);
+list3.append(par3);
+
+
