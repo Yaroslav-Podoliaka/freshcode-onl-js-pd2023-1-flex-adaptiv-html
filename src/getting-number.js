@@ -3,6 +3,8 @@ function gettingNumber(number) {
   function find(current, tmpNumber) {
     if (current === number) {
       return tmpNumber;
+    } else if (current > number) {
+      return null;
     } else {
       return (
         find(current + 5, `(${tmpNumber} + 5)`) ||
