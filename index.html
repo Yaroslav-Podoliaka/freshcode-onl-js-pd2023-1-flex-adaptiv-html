@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
   <!-- <script defer src="./src/lesson-010.js"></script> -->
   <!-- <script defer src="./src/lessen-011.js"></script> -->
   <!-- <script defer src="./src/simple-numbers.js"></script> -->
@@ -19,7 +20,7 @@
   <!-- <script defer src="./src/lessen-015.js"></script> -->
   <!-- <script defer src="./src/palindrome.js"></script> -->
   <!-- <script defer src="./src/factorial.js"></script> -->
-  <script defer src="./src/getting-number.js"></script>
+  <!-- <script defer src="./src/getting-number.js"></script> -->
   <!-- <script defer src="./src/lesson-016.js"></script> -->
   <!-- <script defer src="./src/lesson-017.js"></script> -->
   <!-- <script defer src="./src/reduce-right.js"></script> -->
@@ -31,29 +32,78 @@
   <!-- <script defer src="./src/group's-name-validation.js"></script> -->
   <!-- <script defer src="./src/lesson-020.js"></script> -->
   <!-- <script defer src="./src/lesson-021.js"></script> -->
+  <!-- <script defer type="module" src="./src/lesson-022.js"></script> -->
+	<!-- <script defer src="./src/lesson-023.js"></script> -->
+  <script defer src="./src/collect-props.js"></script>
   <title>Learn JS</title>
 </head>
 <body>
   <div id="container">
-      <p id="firstP">First Par</p>
-      <p id="secondP">Second Par</p>
-      <p>Third Par</p>
-      <p>Fourth Par</p>
-      <p>Fifth Par</p>
-    </div>
-    <!-- <div class="img-container">
-      <img src="./assets/imgs/480px-JavaScript-logo.png" alt="" />
-    </div> -->
-    <div class="anchors">
-      <a href="https://www.ttspin.club/" name="spin">TT club Spin</a>
-      <a href="https://learn.javascript.ru/">Learn JavaScript</a>
-      <a href="https://developer.mozilla.org/" name="mdn">MDN org</a>
-      <a href="https://www.youtube.com/" name="youtube">Youtube</a>
-    </div>
-    <form >
-      <input type="text">
-      <input type="text">
-      <input type="text">
+			<p id="firstP" ondblclick="showText()">First Par</p>
+			<p id="secondP">Second Par</p>
+			<p id="thirthP">Third Par</p>
+			<p>Fourth Par</p>
+			<p>Fifth Par</p>
+		</div>
+		<div class="img-container">
+			<img
+				src="./assets/imgs/480px-JavaScript-logo.png"
+				alt="JavaScript"
+				width="200px"
+			/>
+		</div>
+		<div class="anchors">
+			<a href="./tiles.html" name="tiles">Tiles</a>
+			<a href="./rectangle.html" name="rectangle">Rectangle</a>
+			<a href="https://learn.javascript.ru/">Learn JavaScript</a>
+			<a href="https://developer.mozilla.org/" name="mdn">MDN org</a>
+		</div>
+		<form>
+			<div id="winner">
+				<label for="in1">Winner</label>
+				<input id="in1" type="text" />
+			</div>
+			<div id="looser">
+				<label for="in2">Loser</label>
+				<input id="in2" type="text" />
+			</div>
+			<div>
+				<span id="new-rate"></span>
+			</div>
+			<div class="btn">
+				<button>Calculate</button>
+			</div>
+		</form>
+		<form id="person">
+      <div>
+        <label for="f-name">First Name</label>
+        <input type="text" id="f-name" name="firstName"/>
+      </div>
+      <div>
+        <label for="l-name">Last Name</label>
+        <input type="text" id="l-name" name="lastName" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" />
+      </div>
+      <div>
+        <label for="nick-name">Nick Name</label>
+        <input type="text" id="nick-name" name="nickName"/>
+      </div>
+			<div>
+        <label for="npassword">Password</label>
+        <input type="password" id="password" name="password"/>
+      </div>
+			<div>
+        <label for="c-password">Conf pass</label>
+        <input type="password" id="c-password" name="c-password"/>
+      </div>
+      <div id="btn-person">
+        <button>Ok</button>
+        <button>Cancel</button>
+      </div>
     </form>
+    <div id="time"></div>
 </body>
 </html>
