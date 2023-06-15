@@ -148,10 +148,9 @@ const cPasswordInput = document.querySelector('input[name="c-password"]');
 function checkVerificationPassword() {
   cPasswordInput.type = "password";
   const passwordInrut = document.querySelector('input[name="password"]');
-  // const cPasswMessage = "does not match entered";
   if (cPasswordInput.value !== passwordInrut.value) {
     cPasswordInput.type = "text";
-    cPasswordInput.value = "does not match entered";
+    cPasswordInput.value = "password entered incorrectly";
   }
 }
 cPasswordInput.addEventListener('change', checkVerificationPassword);
