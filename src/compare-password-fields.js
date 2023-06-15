@@ -1,11 +1,11 @@
 'use strict';
 const cPasswordInput = document.querySelector('input[name="c-password"]');
 function checkVerificationPassword() {
-  cPasswordInput.type = "password";
   const passwordInrut = document.querySelector('input[name="password"]');
   if (cPasswordInput.value !== passwordInrut.value) {
-    cPasswordInput.type = "text";
-    cPasswordInput.value = "password entered incorrectly";
+    console.log("password entered incorrectly");
+  } else {
+    console.log("password confirmed correctly");
   }
 }
 cPasswordInput.addEventListener("change", checkVerificationPassword);
