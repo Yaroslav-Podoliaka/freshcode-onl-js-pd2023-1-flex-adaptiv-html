@@ -114,12 +114,12 @@ class Person{
     this.nicName = nicName;
   }
 }
-function collectPropsFormForm(event) {
+function collectPropsFromForm(event) {
   event.preventDefault();
   const collectionProps = Array.from(
     document.querySelectorAll('#person input[type="text"]')
   );
-  const lastName = document.querySelector('input[name="lastName"]')
+  const lastName = document.querySelector('input[name="lastName"]');
   const arrValues = collectionProps.map((item) => item.value);
   const person = new Person(...arrValues);
   localStorage.setItem(`${lastName.value}`, JSON.stringify(person));
@@ -128,9 +128,31 @@ function collectPropsFormForm(event) {
 }
 const mick = JSON.parse(localStorage.getItem('Box'));
 console.log(mick);
-btnOk.addEventListener('click', collectPropsFormForm);
-// collectPropsFormForm();
+btnOk.addEventListener('click', collectPropsFromForm);
 
-// emailInput.addEventListener('chenge', checkEmail);
+const emailInput = document.querySelector('input[name="email"]');
+function checkEmail() {
+  emailInput.style.color = "black";
+  emailInput.style.border = "1px solid black";
+  const regExpCheckEmail =
+    /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/g;
+  if (!regExpCheckEmail.test(email.value)) {
+    emailInput.style.border = "3px solid red";
+    emailInput.style.color = "red";
+    email.value = "not a valid email address";
+  } 
+}
+emailInput.addEventListener("change", checkEmail);
 
+const cPasswordInput = document.querySelector('input[name="c-password"]');
+function checkVerificationPassword() {
+  cPasswordInput.type = "password";
+  const passwordInrut = document.querySelector('input[name="password"]');
+  // const cPasswMessage = "does not match entered";
+  if (cPasswordInput.value !== passwordInrut.value) {
+    cPasswordInput.type = "text";
+    cPasswordInput.value = "does not match entered";
+  }
+}
+cPasswordInput.addEventListener('change', checkVerificationPassword);
 
