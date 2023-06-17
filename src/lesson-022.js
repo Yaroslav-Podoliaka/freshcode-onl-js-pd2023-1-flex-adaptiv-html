@@ -36,7 +36,8 @@ btnCalculate.addEventListener('click', (e) => {
 
 const winnerRate = document.getElementById('in1');
 const looserRate = document.querySelector('#in2');
-const span = document.querySelector('#new-rate');
+export const span = document.querySelector('#new-rate');
+// export default span;
 
 let winRate;
 let losRate;
@@ -67,14 +68,14 @@ let losRate;
 //     return winnerRate + Math.round((Math.abs(deltaRate) + 5) / 3);
 //   }
 // }
-function calculateWinRate(event) {
-  event.preventDefault();
-  winRate = Number(winnerRate.value);
-  losRate = Number(looserRate.value);
-  // console.log(winRate, losRate);
-  span.textContent = getRate(winRate, losRate);
-}
-btnCalculate.addEventListener('click', calculateWinRate);
+// function calculateWinRate(event) {
+//   event.preventDefault();
+//   winRate = Number(winnerRate.value);
+//   losRate = Number(looserRate.value);
+//   // console.log(winRate, losRate);
+//   span.textContent = getRate(winRate, losRate);
+// }
+// btnCalculate.addEventListener('click', calculateWinRate);
 
 
 

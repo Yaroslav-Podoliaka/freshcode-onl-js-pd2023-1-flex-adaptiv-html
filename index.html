@@ -1,85 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- <script defer src="./src/lesson-010.js"></script> -->
-  <!-- <script defer src="./src/lessen-011.js"></script> -->
-  <!-- <script defer src="./src/simple-numbers.js"></script> -->
-  <!-- <script defer src="./src/multiples of.js"></script> -->
-  <!-- <script defer src="./src/guide-for-linux.js"></script> -->
-  <!-- <script defer src="./src/lessen-012.js"></script> -->
-  <!-- <script defer src="./src/lessen-013.js"></script> -->
-  <!-- <script defer src="./src/father-twofold-older.js"></script> -->
-  <!-- <script defer src="./src/fibonacci-n-member.js"></script> -->
-  <!-- <script defer src="./src/get-delta-rate.js"></script> -->
-  <!-- <script defer src="./src/countries-constructor.js"></script> -->
-  <!-- <script defer src="./src/lessen-014.js"></script> -->
-  <!-- <script defer src="./src/lessen-015.js"></script> -->
-  <!-- <script defer src="./src/palindrome.js"></script> -->
-  <!-- <script defer src="./src/factorial.js"></script> -->
-  <!-- <script defer src="./src/getting-number.js"></script> -->
-  <!-- <script defer src="./src/lesson-016.js"></script> -->
-  <!-- <script defer src="./src/lesson-017.js"></script> -->
-  <!-- <script defer src="./src/reduce-right.js"></script> -->
-  <!-- <script defer src="./src/every-in-prototype.js"></script> -->
-  <!-- <script defer src="./src/implement-reverse.js"></script> -->
-  <!-- <script defer src="./src/lesson-018.js"></script> -->
-  <!-- <script defer src="./src/lesson-019.js"></script> -->
-  <!-- <script defer src="./src/animals-hierarchy.js"></script> -->
-  <!-- <script defer src="./src/group's-name-validation.js"></script> -->
-  <!-- <script defer src="./src/lesson-020.js"></script> -->
-  <!-- <script defer src="./src/lesson-021.js"></script> -->
-  <!-- <script defer type="module" src="./src/lesson-022.js"></script> -->
-	<!-- <script defer src="./src/lesson-023.js"></script> -->
-  <!-- <script defer src="./src/collect-props.js"></script> -->
-  <!-- <script defer src="./src/validation-email.js"></script> -->
-  <script defer src="./src/compare-password-fields.js"></script>
-  <title>Learn JS</title>
-</head>
-<body>
-  <div id="container">
-			<p id="firstP" ondblclick="showText()">First Par</p>
-			<p id="secondP">Second Par</p>
-			<p id="thirthP">Third Par</p>
-			<p>Fourth Par</p>
-			<p>Fifth Par</p>
-		</div>
-		<div class="img-container">
-			<img
-				src="./assets/imgs/480px-JavaScript-logo.png"
-				alt="JavaScript"
-				width="200px"
-			/>
-		</div>
-		<div class="anchors">
-			<a href="./tiles.html" name="tiles">Tiles</a>
-			<a href="./rectangle.html" name="rectangle">Rectangle</a>
-			<a href="https://learn.javascript.ru/">Learn JavaScript</a>
-			<a href="https://developer.mozilla.org/" name="mdn">MDN org</a>
-		</div>
-		<form>
-			<div id="winner">
-				<label for="in1">Winner</label>
-				<input id="in1" type="text" />
-			</div>
-			<div id="looser">
-				<label for="in2">Loser</label>
-				<input id="in2" type="text" />
-			</div>
-			<div>
-				<span id="new-rate"></span>
-			</div>
-			<div class="btn">
-				<button>Calculate</button>
-			</div>
-		</form>
-		<form id="person">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <script defer src="./src/lesson-010.js"></script> -->
+    <!-- <script defer src="./src/lessen-011.js"></script> -->
+    <!-- <script defer src="./src/simple-numbers.js"></script> -->
+    <!-- <script defer src="./src/multiples of.js"></script> -->
+    <!-- <script defer src="./src/guide-for-linux.js"></script> -->
+    <!-- <script defer src="./src/lessen-012.js"></script> -->
+    <!-- <script defer src="./src/lessen-013.js"></script> -->
+    <!-- <script defer src="./src/father-twofold-older.js"></script> -->
+    <!-- <script defer src="./src/fibonacci-n-member.js"></script> -->
+    <!-- <script defer src="./src/get-delta-rate.js"></script> -->
+    <!-- <script defer src="./src/countries-constructor.js"></script> -->
+    <!-- <script defer src="./src/lessen-014.js"></script> -->
+    <!-- <script defer src="./src/lessen-015.js"></script> -->
+    <!-- <script defer src="./src/palindrome.js"></script> -->
+    <!-- <script defer src="./src/factorial.js"></script> -->
+    <!-- <script defer src="./src/getting-number.js"></script> -->
+    <!-- <script defer src="./src/lesson-016.js"></script> -->
+    <!-- <script defer src="./src/lesson-017.js"></script> -->
+    <!-- <script defer src="./src/reduce-right.js"></script> -->
+    <!-- <script defer src="./src/every-in-prototype.js"></script> -->
+    <!-- <script defer src="./src/implement-reverse.js"></script> -->
+    <!-- <script defer src="./src/lesson-018.js"></script> -->
+    <!-- <script defer src="./src/lesson-019.js"></script> -->
+    <!-- <script defer src="./src/animals-hierarchy.js"></script> -->
+    <!-- <script defer src="./src/group's-name-validation.js"></script> -->
+    <!-- <script defer src="./src/lesson-020.js"></script> -->
+    <!-- <script defer src="./src/lesson-021.js"></script> -->
+    <!-- <script defer type="module" src="./src/lesson-022.js"></script> -->
+    <!-- <script defer src="./src/lesson-023.js"></script> -->
+    <!-- <script defer src="./src/collect-props.js"></script> -->
+    <script defer src="./src/validation-email.js"></script>
+    <!-- <script defer src="./src/compare-password-fields.js"></script> -->
+    <!-- <script defer type="module" src="./src/lesson-024.js"></script> -->
+    <title>Learn JS</title>
+  </head>
+  <body>
+    <div id="container">
+      <p id="firstP" ondblclick="showText()">First Par</p>
+      <p id="secondP">Second Par</p>
+      <p id="thirthP">Third Par</p>
+      <p>Fourth Par</p>
+      <p>Fifth Par</p>
+    </div>
+    <div class="img-container">
+      <img
+        src="./assets/imgs/480px-JavaScript-logo.png"
+        alt="JavaScript"
+        width="200px"
+      />
+    </div>
+    <div class="anchors">
+      <a href="./tiles.html" name="tiles">Tiles</a>
+      <a href="./rectangle.html" name="rectangle">Rectangle</a>
+      <a href="https://learn.javascript.ru/">Learn JavaScript</a>
+      <a href="https://developer.mozilla.org/" name="mdn">MDN org</a>
+    </div>
+    <form>
+      <div id="winner">
+        <label for="in1">Winner</label>
+        <input id="in1" type="text" />
+      </div>
+      <div id="looser">
+        <label for="in2">Loser</label>
+        <input id="in2" type="text" />
+      </div>
+      <div>
+        <span id="new-rate"></span>
+      </div>
+      <div class="btn">
+        <button>Calculate</button>
+      </div>
+    </form>
+    <form id="person">
       <div>
         <label for="f-name">First Name</label>
-        <input type="text" id="f-name" name="firstName"/>
+        <input type="text" id="f-name" name="firstName" />
       </div>
       <div>
         <label for="l-name">Last Name</label>
@@ -91,15 +92,15 @@
       </div>
       <div>
         <label for="nick-name">Nick Name</label>
-        <input type="text" id="nick-name" name="nickName"/>
+        <input type="text" id="nick-name" name="nickName" />
       </div>
-			<div>
+      <div>
         <label for="password">Password</label>
-        <input type="password" id="password" name="password"/>
+        <input type="password" id="password" name="password" />
       </div>
-			<div>
+      <div>
         <label for="c-password">Conf pass</label>
-        <input type="password" id="c-password" name="c-password"/>
+        <input type="password" id="c-password" name="c-password" />
       </div>
       <div id="btn-person">
         <button>Ok</button>
@@ -107,5 +108,5 @@
       </div>
     </form>
     <div id="time"></div>
-</body>
+  </body>
 </html>
